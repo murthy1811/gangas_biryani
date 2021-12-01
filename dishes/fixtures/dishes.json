@@ -1,0 +1,30 @@
+[
+    {
+      "pk": 1,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001340155",
+        "name": "Chicken Curry",
+        "description": "Freshly marinated chicken cooked in spices with added onions and tomatoes",
+        "price": 150.00,
+        "category": 6,
+        "rating": 4.6,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "chicken_curry.jpg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600425",
+        "name": "Chicken and Mutton Biryani",
+        "description": "A combo of Chicken and Mutton biryani to enjoy a big meal with friends",
+        "price": 179.99,
+        "category": 4,
+        "rating": 4.6,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "chicken_biryani.jpg"
+      }
+    }
+]

@@ -1,0 +1,67 @@
+[
+    {
+      "pk": 1,
+      "model": "dishes.category",
+      "fields": {
+        "name": "with_meat",
+        "friendly_name": "With Meat"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "dishes.category",
+      "fields": {
+        "name": "veggie_curry",
+        "friendly_name": "Veggie curry"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "dishes.category",
+      "fields": {
+        "name": "discounted",
+        "friendly_name": "Discounted"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "dishes.category",
+      "fields": {
+        "name": "combos",
+        "friendly_name": "Combos"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "dishes.category",
+      "fields": {
+        "name": "veggie_biryani",
+        "friendly_name": "Veggie"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "dishes.category",
+      "fields": {
+        "name": "meat_curry",
+        "friendly_name": "Meat curry"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "dishes.category",
+      "fields": {
+        "name": "new_dishes",
+        "friendly_name": "New Dishes"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "dishes.category",
+      "fields": {
+        "name": "mixed",
+        "friendly_name": "Mixed"
+      }
+    }
+  ]
+  

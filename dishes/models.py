@@ -2,6 +2,11 @@ from django.db import models
 
 
 class Category(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -13,6 +18,10 @@ class Category(models.Model):
 
 
 class Dish(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Dishes'
+
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)

@@ -17,10 +17,10 @@
                 Biryani's
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">With Meat</a>
-                <a href="" class="dropdown-item">Veggie</a>
-                <a href="" class="dropdown-item">Mixed</a>
-                <a href="" class="dropdown-item">All Biryani's</a>
+                <a href="{% url 'dishes' %}?category=with_meat" class="dropdown-item">With Meat</a>
+                <a href="{% url 'dishes' %}?category=veggie" class="dropdown-item">Veggie</a>
+                <a href="{% url 'dishes' %}?category=mixed" class="dropdown-item">Mixed</a>
+                <a href="{% url 'dishes' %}?category=with_meat,veggie,mixed" class="dropdown-item">All Biryani's</a>
             </div>
         </li>
 
@@ -29,9 +29,9 @@
                 Curry's
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Veggie curry</a>
-                <a href="" class="dropdown-item">Meat curry</a>
-                <a href="" class="dropdown-item">All Curry's</a>
+                <a href="{% url 'dishes' %}?category=veggie_curry" class="dropdown-item">Veggie curry</a>
+                <a href="{% url 'dishes' %}?category=meat_curry" class="dropdown-item">Meat curry</a>
+                <a href="{% url 'dishes' %}?category=veggie_curry,meat_curry" class="dropdown-item">All Curry's</a>
             </div>
         </li>
 
@@ -40,10 +40,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Dishes</a>
-                <a href="" class="dropdown-item">Combos</a>
-                <a href="" class="dropdown-item">Discounted</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'dishes' %}?category=new_dishes" class="dropdown-item">New Dishes</a>
+                <a href="{% url 'dishes' %}?category=combos" class="dropdown-item">Combos</a>
+                <a href="{% url 'dishes' %}?category=discounted" class="dropdown-item">Discounted</a>
+                <a href="{% url 'dishes' %}?category=new_dishes,combos,discounted" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>

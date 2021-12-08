@@ -11,14 +11,30 @@ def all_dishes(request):
     dishes = Dish.objects.all()
     query = None
     categories = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                dishes = dishes.annotate(lower_name=Lower('name'))
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            dishes = dishes.order_by(sortkey)
+
+   
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             dishes = dishes.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-    if request.GET:
+    
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -28,10 +44,13 @@ def all_dishes(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             dishes = dishes.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+    
     context = {
         'dishes': dishes,
         'search_term': query,
         'current_categories': categories,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'dishes/dishes.html', context)

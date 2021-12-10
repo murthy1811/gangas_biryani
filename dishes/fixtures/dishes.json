@@ -9,7 +9,7 @@
         "price": 150.00,
         "category": 6,
         "rating": 4.6,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://ibb.co/1QwFvMq",
         "image": "chicken_curry.jpg"
       }
     },
@@ -26,5 +26,260 @@
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "chicken_biryani.jpg"
       }
-    }
+    },
+
+    {
+      "pk": 3,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600111",
+        "name": "Curd Rice",
+        "description": "Rice and Yoghurt mixed with basic spices and decorated with pomegranate seeds",
+        "price": 80,
+        "category": 3,
+        "rating": 4.9,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "curd_rice.jpg"
+      }
+    },
+
+    {
+      "pk": 4,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600112",
+        "name": "Indian Naan",
+        "description": "Indian bread made with all purpose flour and baked in hot oven",
+        "price": 35,
+        "category": 3,
+        "rating": 4.2,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "indian_naan.jpg"
+      }
+    },
+
+    {
+      "pk": 5,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600220",
+        "name": "Fish Biryani",
+        "description": "Basmati rice cooked with spices and fish masala with river fish cut pieces",
+        "price": 125,
+        "category": 1,
+        "rating": 4.0,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "fish_biryani.jpg"
+      }
+    },
+
+    {
+      "pk": 6,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600221",
+        "name": "Mutton Biryani",
+        "description": "Basmati rice cooked with tender goat meat and spices",
+        "price": 175,
+        "category": 1,
+        "rating": 5.0,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "mutton_biryani.jpg"
+      }
+    },
+
+    {
+      "pk": 7,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600222",
+        "name": "Prawn Biryani",
+        "description": "Basmati rice cooked with spices and lake grown prawns",
+        "price": 180,
+        "category": 1,
+        "rating": 4.8,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "prawn_biryani.jpg"
+      }
+    },
+
+    {
+      "pk": 8,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600223",
+        "name": "Chicken Biryani",
+        "description": "Basmati rice cooked with splendid spices and chicken leg pieces",
+        "price": 145,
+        "category": 1,
+        "rating": 4.9,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "chicken_biryani.jpg"
+      }
+    },
+
+    {
+      "pk": 9,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600331",
+        "name": "Fish Curry",
+        "description": "Onion fried gravy with mixed spice flavour spread with well cut fish pieces",
+        "price": 195,
+        "category": 6,
+        "rating": 4.6,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "fish_curry.jpg"
+      }
+    },
+
+    {
+      "pk": 10,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600332",
+        "name": "Fish Tamarind Sauce",
+        "description": "Tamarind sauce boiled with well cut pommet fish pieces",
+        "price": 199,
+        "category": 6,
+        "rating": 4.7,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "fish_tamarind_sauce.jpg"
+      }
+    },
+
+    {
+      "pk": 11,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600333",
+        "name": "Mutton Curry",
+        "description": "Tenedered goat meat cut pieces cooked with aroumatic spices and onions",
+        "price": 185,
+        "category": 6,
+        "rating": 4.2,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "mutton_curry.jpg"
+      }
+    },
+
+    {
+      "pk": 12,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600334",
+        "name": "Prawn Curry",
+        "description": "Lake grown soft and juicy prawns peeled and fried, well cooked with butter and spices",
+        "price": 210,
+        "category": 6,
+        "rating": 4.4,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "prawn_curry.jpg"
+      }
+    },
+
+    {
+      "pk": 13,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600441",
+        "name": "Mixed Meat Biryani",
+        "description": "Have it all with Prawns, Mutton and Chicken mixed into a well cooked spicy Biryani",
+        "price": 250,
+        "category": 8,
+        "rating": 4.5,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "mixed_meat.jpg"
+      }
+    },
+
+    {
+      "pk": 14,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600550",
+        "name": "Lentil Vada",
+        "description": "Rice and Yoghurt mixed with basic spices and decorated with pomegranate seeds",
+        "price": 75,
+        "category": 7,
+        "rating": 0.0,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "lentil_vada.jpg"
+      }
+    },
+
+    {
+      "pk": 15,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600551",
+        "name": "Poori",
+        "description": "Good for breakfast - Wheat flour pancakes fried in oil",
+        "price": 50,
+        "category": 7,
+        "rating": 0.0,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "poori.jpg"
+      }
+    },
+
+    {
+      "pk": 16,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600552",
+        "name": "Samosa",
+        "description": "Vegetable curry spread inside all purpose flour, and fried in oil",
+        "price": 60,
+        "category": 7,
+        "rating": 4.9,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "samosa.jpg"
+      }
+    },
+
+    {
+      "pk": 17,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600660",
+        "name": "Vegetable Biryani",
+        "description": "Basmati rice cooked with vegetables and blended spices",
+        "price": 140,
+        "category": 5,
+        "rating": 4.6,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "vegetable_biryani.jpg"
+      }
+    },
+
+    {
+      "pk": 18,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600661",
+        "name": "Soya Pulav",
+        "description": "Rice boiled with spices and added soya chunks to the flavour",
+        "price": 80,
+        "category": 5,
+        "rating": 4.9,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "soya_pulav.jpg"
+      }
+    },
+
+    {
+      "pk": 19,
+      "model": "dishes.dish",
+      "fields": {
+        "sku": "pp5001600662",
+        "name": "Paneer Biryani",
+        "description": "Basmati rice cooked with Indian cottage cheese, flavoured with spices",
+        "price": 165,
+        "category": 5,
+        "rating": 4.2,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "paneer_biryani.jpg"
+      }
+    },
 ]

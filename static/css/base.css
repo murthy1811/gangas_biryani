@@ -10,6 +10,12 @@ body {
     font-family: 'Revalia';
 }
 
+.img-fluid{
+    height : 200px;
+    width : 225px;
+    object-fit: contain;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;

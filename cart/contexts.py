@@ -14,7 +14,7 @@ def cart_contents(request):
         dish = get_object_or_404(Dish, pk=item_id)
         total += quantity * dish.price
         dish_count += quantity
-        dish_items.append({
+        cart_items.append({
             'item_id': item_id,
             'quantity': quantity,
             'dish': dish,

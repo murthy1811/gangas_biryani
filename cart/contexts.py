@@ -27,7 +27,7 @@ def cart_contents(request):
                 dish_count += quantity
                 cart_items.append({
                     'item_id': item_id,
-                    'quantity': item_data,
+                    'quantity': quantity,
                     'dish': dish,
                     'size': size,
                 })

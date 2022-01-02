@@ -24,7 +24,7 @@ def add_to_cart(request, item_id):
             else:
                 cart[item_id]['items_by_size'][size] = quantity
         else:
-            cart[item_id] = {'items_by_size': {size: quantity}}
+            cart[item_id] = {'items_by_size': {size:quantity}}
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity

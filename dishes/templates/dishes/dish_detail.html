@@ -47,22 +47,38 @@
                     {% csrf_token %}
                     <div class="form-row">
                         {% with dish.has_sizes as s %}
-                            {% if s %}
-                                <div class="col-12">
-                                    <p><strong>Size:</strong></p>
-                                    <select class="form-control rounded-0 w-50" name="dish_size" id='id_dish_size'>
-                                        <option value="s">Small, serves 1</option>
-                                        <option value="m" selected>Large, serves 2</option>
-                                        <option value="xl">Jumbo, serves 4</option>
-                                    </select>
-                                </div>
-                            {% endif %}
+                        {% if s %}
+                        <div class="col-12">
+                            <p><strong>Size:</strong></p>
+                            <select class="form-control rounded-0 w-50" name="dish_size" id='id_dish_size'>
+                                <option value="s">Small, serves 1</option>
+                                <option value="m" selected>Large, serves 2</option>
+                                <option value="xl">Jumbo, serves 4</option>
+                            </select>
+                        </div>
+                        {% endif %}
                         <div class="col-12">
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
                                 <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="decrement-qty btn btn-black rounded-0"
+                                            data-item_id="{{ dish.id }}" id="decrement-qty_{{ dish.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
                                     <input class="form-control qty_input" type="number" name="quantity" value="1"
                                         min="1" max="99" data-item_id="{{ dish.id }}" id="id_qty_{{ dish.id }}">
+                                    <div class="input-group-append">
+                                        <button class="increment-qty btn btn-black rounded-0"
+                                            data-item_id="{{ dish.id }}" id="increment-qty_{{ dish.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +90,8 @@
                                 </span>
                                 <span class="text-uppercase">Eat more</span>
                             </a>
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
+                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5"
+                                value="Add to Cart">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% endwith %}
@@ -84,4 +101,9 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'dishes/includes/quantity_input_script.html' %}
 {% endblock %}

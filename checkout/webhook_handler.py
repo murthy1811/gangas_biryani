@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.conf import settings
 
 
 class StripeWH_Handler:

@@ -62,7 +62,9 @@
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="small mb-0 text-black font-weight-bold">
-                                {{ item.dish.name }}{% if item.dish_size %} - Size {{ item.dish_size|upper }}{% endif %}
+                                {{ item.dish.name }}
+                                {% if item.dish_size %} - Size {{ item.dish_size|upper }}
+                                {% endif %}
                             </p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
@@ -192,12 +194,21 @@
         </div>
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
-				<a href="{% url 'dishes' %}?category=new_dishes,combos,discounted" class="btn btn-black rounded-0 my-2">
+                {% if from_profile %}
+                    <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+                    <span class="icon mr-2">
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                    <span class="text-uppercase">Back to Profile</span>
+                </a>
+                {% else %}
+				    <a href="{% url 'dishes' %}?category=new_dishes,combos,discounted" class="btn btn-black rounded-0 my-2">
 					<span class="icon mr-2">
 						<i class="fas fa-gifts"></i>
 					</span>
 					<span class="text-uppercase">Now check out the latest deals!</span>
-				</a>
+				    </a>
+                    {% endif %}
 			</div>
 		</div>
     </div>

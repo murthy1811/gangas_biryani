@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Dish, Category
+from .forms import DishForm
+
 
 # Create your views here.
 
@@ -67,3 +69,14 @@ def dish_detail(request, dish_id):
     }
 
     return render(request, 'dishes/dish_detail.html', context)
+
+
+def add_dish(request):
+    """ Add a new dish to the store """
+    form = DishForm()
+    template = 'dishes/add_dish.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

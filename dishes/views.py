@@ -90,4 +90,28 @@ def add_dish(request):
     }
 
     return render(request, template, context)
+
+
+def edit_dish(request, dish_id):
+    """ Edit a dish in the portal """
+    dish = get_object_or_404(Dish, pk=dish_id)
+    if request.method == 'POST':
+        form = DishForm(request.POST, request.FILES, instance=dish)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated dish!')
+            return redirect(reverse('dish_detail', args=[dish.id]))
+        else:
+            messages.error(request, 'Failed to update dish. Please ensure the form is valid.')
+    else:
+        form = DishForm(instance=dish)
+        messages.info(request, f'You are editing {dish.name}')
+
+    template = 'dishes/edit_dish.html'
+    context = {
+        'form': form,
+        'dish': dish,
+    }
+
+    return render(request, template, context)
     

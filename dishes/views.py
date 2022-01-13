@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Dish, Category
@@ -71,8 +72,14 @@ def dish_detail(request, dish_id):
     return render(request, 'dishes/dish_detail.html', context)
 
 
+@login_required
 def add_dish(request):
     """ Add a new dish to the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = DishForm(request.POST, request.FILES)
         if form.is_valid():
@@ -92,8 +99,12 @@ def add_dish(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_dish(request, dish_id):
     """ Edit a dish in the portal """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
     dish = get_object_or_404(Dish, pk=dish_id)
     if request.method == 'POST':
         form = DishForm(request.POST, request.FILES, instance=dish)
@@ -116,8 +127,13 @@ def edit_dish(request, dish_id):
     return render(request, template, context)
     
 
+@login_required
 def delete_dish(request, dish_id):
     """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+        
     dish = get_object_or_404(Dish, pk=dish_id)
     dish.delete()
     messages.success(request, 'Dish deleted!')

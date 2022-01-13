@@ -76,9 +76,9 @@ def add_dish(request):
     if request.method == 'POST':
         form = DishForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            dish = form.save()
             messages.success(request, 'Successfully added dish!')
-            return redirect(reverse('add_dish'))
+            return redirect(reverse('dish_detail', args=[dish.id]))
         else:
             messages.error(request, 'Failed to add dish. Please ensure the form is valid.')
     else:
@@ -115,3 +115,10 @@ def edit_dish(request, dish_id):
 
     return render(request, template, context)
     
+
+def delete_dish(request, dish_id):
+    """ Delete a product from the store """
+    dish = get_object_or_404(Dish, pk=dish_id)
+    dish.delete()
+    messages.success(request, 'Dish deleted!')
+    return redirect(reverse('dishes'))

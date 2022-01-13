@@ -73,10 +73,21 @@ def dish_detail(request, dish_id):
 
 def add_dish(request):
     """ Add a new dish to the store """
-    form = DishForm()
+    if request.method == 'POST':
+        form = DishForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added dish!')
+            return redirect(reverse('add_dish'))
+        else:
+            messages.error(request, 'Failed to add dish. Please ensure the form is valid.')
+    else:
+        form = DishForm()
+    
     template = 'dishes/add_dish.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
+    

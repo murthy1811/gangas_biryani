@@ -1,5 +1,13 @@
 from django.db import models
-from dishes.models import Dish
+from django.contrib.auth.models import User
+
+class Rating(models.Model):
+    post = models.CharField(max_length=500)
+    user = models.ForeignKey(User, on_delete=models.DO_NOTHING,)
+
+    
+
+
 
 
 

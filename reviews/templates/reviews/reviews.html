@@ -14,7 +14,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">All Dishes</h2>
+            <h2 class="logo-font">Rate your Favourite Dish</h2>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'dishes' %}?category={{ c.name }}">
                 <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">
@@ -70,7 +70,6 @@
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">SEK {{ dish.price }}</p>
                                     {% if dish.category %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted"
@@ -79,21 +78,49 @@
                                         </a>
                                     </p>
                                     {% endif %}
-                                    {% if dish.rating %}
-                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ dish.rating }} /
-                                        5</small>
-                                    {% else %}
-                                    <small class="text-muted">No Rating</small>
-                                    {% endif %}
-                                    {% if request.user.is_superuser %}
-                                                <small class="ml-3">
-                                                    <a href="{% url 'edit_dish' dish.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="{% url 'delete_dish' dish.id %}">Delete</a>
-                                                </small>
-                                    {% endif %}
                                 </div>
                             </div>
                         </div>
+                        <form class="was-validated" autocomplete="off" id="feedbackform" onsubmit="return sendMail(this);">
+ 
+                            <div class="row question">
+                                <div class="col-12">
+                                    <p>Rate the Dish</p>
+                                    <div class="star-rating">
+                                        <div class="star-input">
+                                            <input type="radio" name="rating" id="rating-5" value="I love it"
+                                                onClick="overallRating=this.value;" required>
+                                            <label for="rating-5" class="fas fa-star"></label>
+                                            <input type="radio" name="rating" id="rating-4" value="I like it"
+                                                onClick="overallRating=this.value;" required>
+                                            <label for="rating-4" class="fas fa-star"></label>
+                                            <input type="radio" name="rating" id="rating-3" value="It is good"
+                                                onClick="overallRating=this.value;" required>
+                                            <label for="rating-3" class="fas fa-star"></label>
+                                            <input type="radio" name="rating" id="rating-2" value="I don't like it"
+                                                onClick="overallRating=this.value;" required>
+                                            <label for="rating-2" class="fas fa-star"></label>
+                                            <input type="radio" name="rating" id="rating-1" value="I hate it"
+                                                onClick="overallRating=this.value;" required>
+                                            <label for="rating-1" class="fas fa-star"></label>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row question">
+                                <div class="col-12">
+                                    <label for="textfeedback">comments:</label>
+                                    <textarea id="textfeedback" name="comments" rows="5" cols="10"></textarea>
+                                </div>
+                            </div>
+    
+                            <div>
+                                <span class="rating-reaction"></span>
+                                <button type="submit" id="submitBtn" class="submit-rating">Submit</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 {% if forloop.counter|divisibleby:1 %}
@@ -160,4 +187,6 @@
             }
         })
     </script>
+
+    
 {% endblock %}

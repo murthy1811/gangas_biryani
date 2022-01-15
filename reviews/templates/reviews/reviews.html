@@ -42,17 +42,20 @@
                 <form action="{% url 'reviews' %}" method="post" class="was-validated" autocomplete="off"
                     id="feedbackform">
                     {% csrf_token %}
-                    
+                   
                     <div class="row">
                         <div class="col-12">
                             <label for="dish-select"> Your Choice of Dish </label>
                             <br>
-                            <select id="dish-select" type="dropdown-item" height=100 style="width: 750px" name="test">
-                                <option value="" selected>Select a Dish</option>
-                                {% for dish in dishes %}
+                            <!-- <select id="dish-select" type="dropdown-item" height=100 style="width: 750px" name="test">
+                                <option value="" selected>Select a Dish</option> -->
+                                <!-- {% for dish in dishes %} -->
+                                {{ rating_form.select_dish| as_crispy_field }}
+                                <!-- {% endfor %} -->
+                                <!-- {% for dish in dishes %}
                                 <option value="">{{ dish.name }}</option>
-                                {% endfor %}
-                            </select>
+                                {% endfor %} -->
+                            <!-- </select> -->
                         </div>
                     </div>
                     <div class="row question">
@@ -83,9 +86,10 @@
 
                     <div class="row question">
                         <div class="col-12">
-                            <label for="textfeedback">comments:</label>
+                            {{ rating_form.message | as_crispy_field }}
+                            <!-- <label for="textfeedback">comments:</label>
                             <br>
-                            <textarea id="textfeedback" name="comments" rows="4" cols="60"></textarea>
+                            <textarea id="textfeedback" name="comments" rows="4" cols="60"></textarea> -->
                         </div>
                     </div>
 
@@ -109,34 +113,8 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
-    $('.btt-link').click(function (e) {
-        window.scrollTo(0, 0)
-    })
-</script>
 
-<script type="text/javascript">
-    $('#sort-selector').change(function () {
-        var selector = $(this);
-        var currentUrl = new URL(window.location);
 
-        var selectedVal = selector.val();
-        if (selectedVal != "reset") {
-            var sort = selectedVal.split("_")[0];
-            var direction = selectedVal.split("_")[1];
-
-            currentUrl.searchParams.set("sort", sort);
-            currentUrl.searchParams.set("direction", direction);
-
-            window.location.replace(currentUrl);
-        } else {
-            currentUrl.searchParams.delete("sort");
-            currentUrl.searchParams.delete("direction");
-
-            window.location.replace(currentUrl);
-        }
-    })
-</script>
 <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}">
 </script>
 {% endblock %}

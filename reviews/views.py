@@ -1,15 +1,33 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from dishes.models import Dish
-from django.views.generic import TemplateView
+from django.contrib import messages
 from reviews.forms import RatingForm
 
 
 def all_reviews(request):
     dishes = Dish.objects.all()
+    rating_form = RatingForm()
+    template = 'reviews/reviews.html'
     context = {
+        'rating_form' : rating_form,
         'dishes': dishes,
     }
-    return render(request, 'reviews/reviews.html', context)
+
+    return render(request, template, context)
+
+
+
+
+
+
+
+
+# def all_reviews(request):
+#     dishes = Dish.objects.all()
+#     context = {
+#         'dishes': dishes,
+#     }
+#     return render(request, 'reviews/reviews.html', context)
 
 # class RatingView(TemplateView):
 #     template_name = 'reviews/reviews.html'
@@ -17,31 +35,31 @@ def all_reviews(request):
 
 
 
-def post(self, request):
-    # if this is a POST request we need to process the form data
-    if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
-        form = RatingForm(request.POST)
+# def post(self, request):
+#     # if this is a POST request we need to process the form data
+#     if request.method == 'POST':
+#         # create a form instance and populate it with data from the request:
+#         form = RatingForm(request.POST)
         
-        # check whether it's valid:
-        if form.is_valid():
-            form.save()
-            dish_select = form.cleaned_data['dish_select']
-            message = form.cleaned_data['message']
+#         # check whether it's valid:
+#         if form.is_valid():
+#             form.save()
+#             dish_select = form.cleaned_data['dish_select']
+#             message = form.cleaned_data['message']
             
-            return HttpResponseRedirect('/thanks/')
+#             return HttpResponseRedirect('/thanks/')
 
-    # if a GET (or any other method) we'll create a blank form
-    else:
-        form = RatingForm()
+#     # if a GET (or any other method) we'll create a blank form
+#     else:
+#         form = RatingForm()
     
-    return render(request, 'reviews/reviews.html', context)
+#     return render(request, 'reviews/reviews.html', context)
 
     
 
 # def get(self, request):
 #         form = RatingForm()
-#         return render(request, self.template_name, {'form': form})
+#         return render(request, 'reviews/reviews.html', {'form': form})
 
 # def post(self,request):
 #         form = RatingForm(request.POST)

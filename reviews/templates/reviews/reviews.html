@@ -81,7 +81,9 @@
                                 </div>
                             </div>
                         </div>
-                        <form class="was-validated" autocomplete="off" id="feedbackform" onsubmit="return sendMail(this);">
+
+                       
+                        <form class="was-validated" autocomplete="off" id="feedbackform">
  
                             <div class="row question">
                                 <div class="col-12">
@@ -112,7 +114,8 @@
                             <div class="row question">
                                 <div class="col-12">
                                     <label for="textfeedback">comments:</label>
-                                    <textarea id="textfeedback" name="comments" rows="5" cols="10"></textarea>
+                                    <br>
+                                    <textarea id="textfeedback" name="comments" rows="1" cols="20"></textarea>
                                 </div>
                             </div>
     
@@ -121,6 +124,7 @@
                                 <button type="submit" id="submitBtn" class="submit-rating">Submit</button>
                             </div>
                         </form>
+                       
                     </div>
                 </div>
                 {% if forloop.counter|divisibleby:1 %}
@@ -187,6 +191,6 @@
             }
         })
     </script>
-
-    
+    <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}">
+    </script>
 {% endblock %}

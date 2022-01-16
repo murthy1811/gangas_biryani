@@ -9,7 +9,7 @@ def subscriptions_join(request):
     redirect_url = request.POST.get('redirect_url')
 
     if request.method == "POST":
-        email = request.POST.get('textfeedback')
+        email = request.POST.get('subscription_email')
         if email:
             # Checks if email already in a list, provides message
             try:

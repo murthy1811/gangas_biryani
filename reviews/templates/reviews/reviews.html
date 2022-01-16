@@ -46,10 +46,10 @@
                     <div class="row">
                         <div class="col-12">
                              <br>
-                             <select id="dish-select" type="dropdown-item" height=100 style="width: 750px" name="test">
+                             <select name="selectdish" id="dish-select" type="dropdown-item" height=100 style="width: 750px" name="test">
                                 <option value="" selected>Select a Dish</option>
                                 {% for dish in dishes %}                                
-                                <option name="selectdish" value="">{{ dish.name }}</option>
+                                <option name="selectdish" value="{{dish.name}}">{{ dish.name }}</option>
                                 {% endfor %}
                             </select>
                         </div>

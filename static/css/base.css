@@ -13,7 +13,13 @@ body {
 .img-fluid{
     height : 200px;
     width : 225px;
-    object-fit: contain;
+    object-fit: cover;
+}
+
+.img-detail{
+    height: auto;
+    width: auto;
+    object-fit: cover;
 }
 
 /* from Bulma */

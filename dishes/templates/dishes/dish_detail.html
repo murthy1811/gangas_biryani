@@ -17,11 +17,11 @@
             <div class="image-container my-5">
                 {% if dish.image %}
                 <a href="{{ dish.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid" src="{{ dish.image.url }}" alt="{{ dish.name }}">
+                    <img class="card-img-top img-fluid img-detail" src="{{ dish.image.url }}" alt="{{ dish.name }}">
                 </a>
                 {% else %}
                 <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ dish.name }}">
+                    <img class="card-img-top img-fluid img-detail" src="{{ MEDIA_URL }}noimage.png" alt="{{ dish.name }}">
                 </a>
                 {% endif %}
             </div>

@@ -132,6 +132,8 @@
         </div>
     </header>
 
+     <!-- Footer-->
+   
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
@@ -161,6 +163,9 @@
         $('.toast').toast('show');
     </script>
     {% endblock %}
+
+    {% include 'includes/footer.html' %}
+    
 </body>
 
 </html>

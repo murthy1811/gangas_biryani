@@ -444,3 +444,27 @@ input[name='q']::placeholder {
 form .submit-rating:hover {
 	background-color: #0e535e;
 }
+
+
+/* footer css */
+
+.email a {
+    color: white;
+  
+}
+
+.phone a {
+    color: white;
+    
+}
+
+.social-links li a i {
+	
+	color: #fafafa;
+	
+}
+
+.social-links, .phone{
+    padding-top: 20px;
+}
+

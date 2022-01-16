@@ -15,6 +15,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='review',
             name='select_dish',
-            field=models.ForeignKey(default='1', on_delete=django.db.models.deletion.CASCADE, to='dishes.dish'),
+            field=models.ForeignKey(default='0', on_delete=django.db.models.deletion.CASCADE, to='dishes.dish'),
         ),
     ]

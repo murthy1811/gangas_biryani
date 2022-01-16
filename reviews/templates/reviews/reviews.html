@@ -41,14 +41,26 @@
             <div class="row">
                 <form action="{% url 'reviews' %}" method="POST" class="was-validated" autocomplete="off"
                     id="feedbackform">
-                    {% csrf_token %}                   
-                    
+                    {% csrf_token %}
+
+                    <div class="row">
+                        <div class="col-12">
+                             <br>
+                             <select id="dish-select" type="dropdown-item" height=100 style="width: 750px" name="test">
+                                <option value="" selected>Select a Dish</option>
+                                {% for dish in dishes %}                                
+                                <option name="selectdish" value="">{{ dish.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
 
                     <div class="row question">
                         <div class="col-12">
-                           <label for="textfeedback">comments:</label>
+                            <label for="textfeedback">comments:</label>
                             <br>
-                            <textarea name="textfeedback" id="textfeedback" name="comments" rows="4" cols="60"></textarea>
+                            <textarea name="textfeedback" id="textfeedback" name="comments" rows="4"
+                                cols="60"></textarea>
                         </div>
                     </div>
 
@@ -63,7 +75,7 @@
 </div>
 
 
- <!-- Subscription model Code taken from ErnesteMajute user from github -->
+<!-- Subscription model Code taken from ErnesteMajute user from github -->
 
 <div class="container-fluid about-container">
     <div class="row">
@@ -76,12 +88,15 @@
                 </small>
             </div>
             <form action="{% url 'subscriptions_join' %}" method="POST">
-            {% csrf_token %}
+                {% csrf_token %}
                 <div class="mb-3">
-                    <input type="email" class="form-control text-center rounded-0" id="subscriptions-id"  placeholder="Your Email Address" name="subscription_email" aria-describedby="emailHelp" required>
+                    <input type="email" class="form-control text-center rounded-0" id="subscriptions-id"
+                        placeholder="Your Email Address" name="subscription_email" aria-describedby="emailHelp"
+                        required>
                 </div>
                 <!-- Button to submit form -->
-                <button type="submit" class="mt-5 mb-5 btn btn-dark rounded-0 btn btn-md  text-uppercase">Submit</button>
+                <button type="submit"
+                    class="mt-5 mb-5 btn btn-dark rounded-0 btn btn-md  text-uppercase">Submit</button>
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
             </form>
         </div>

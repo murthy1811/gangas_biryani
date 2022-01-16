@@ -334,6 +334,16 @@ input[name='q']::placeholder {
 }
 
 
+@media (max-width: 450px) {
+
+    .nav-icon{
+        width: 275px;
+        font-size: small;
+        padding-left: 0px;
+    }
+    }
+
+
 /* -----------star rating queriess CSS( code taken from https://www.markuptag.com/feedback-form-with-star-rating-html/ ) */
 
 .star-rating input {

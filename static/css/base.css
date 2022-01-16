@@ -22,6 +22,12 @@ body {
     object-fit: cover;
 }
 
+.text-center{
+    color: #fd7e14;
+}
+
+
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -40,19 +46,19 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: #fd7e14;
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
+    background: #fd7e14;
     color: white;
 }
 
 .btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    background: #fd7e14;
+    color: white !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
@@ -62,20 +68,21 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: #fd7e14;
     color: white;
 }
 
 .text-black {
-    color: #000 !important;
+    color: #fd7e14 !important;
 }
+
 
 .border-black {
     border: 1px solid black !important;
 }
 
 .bg-black {
-    background: #000 !important;
+    background: #272726 !important;
 }
 
 .overlay {
@@ -179,6 +186,7 @@ input[name='q']::placeholder {
 }
 
 
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -196,7 +204,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
+    border-color: #fd7e14;
     border-radius: 0;
 }
 
@@ -220,8 +228,8 @@ input[name='q']::placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: #fd7e14;
+    border: 1px solid #fd7e14;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -311,6 +319,7 @@ input[name='q']::placeholder {
     .navbar-toggler {
         padding: .6rem .6rem;
         font-size: 1rem;
+        background-color: #fd7e14;
     }
 
     #delivery-banner h4 {
@@ -334,13 +343,21 @@ input[name='q']::placeholder {
 }
 
 
-@media (max-width: 450px) {
+@media (max-width: 460px) {
 
     .nav-icon{
-        width: 275px;
-        font-size: small;
+        width: 300px;
+        font-size: smaller;
         padding-left: 0px;
+        float: none;
     }
+
+    .img-fluid{
+        height : 200px;
+        width : auto;
+        object-fit: cover;
+    }
+
     }
 
 

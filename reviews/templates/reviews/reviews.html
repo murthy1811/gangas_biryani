@@ -41,55 +41,14 @@
             <div class="row">
                 <form action="{% url 'reviews' %}" method="POST" class="was-validated" autocomplete="off"
                     id="feedbackform">
-                    {% csrf_token %}
-                   
-                    <div class="row">
-                        <div class="col-12">
-                            <label for="dish-select"> Your Choice of Dish </label>
-                            <br>
-                            <!-- <select id="dish-select" type="dropdown-item" height=100 style="width: 750px" name="test">
-                                <option value="" selected>Select a Dish</option> -->
-                                <!-- {% for dish in dishes %} -->
-                                {{ rating_form.select_dish| as_crispy_field }}
-                                <!-- {% endfor %} -->
-                                <!-- {% for dish in dishes %}
-                                <option value="">{{ dish.name }}</option>
-                                {% endfor %} -->
-                            <!-- </select> -->
-                        </div>
-                    </div>
-                    <div class="row question">
-                        <div class="col-12">
-                            <p>Rate the Dish</p>
-                            <div class="star-rating">
-                                <div class="star-input">
-                                    <input type="radio" name="rating" id="rating-1" value="I hate it"
-                                        onClick="overallRating=this.value;" required>
-                                    <label for="rating-1" class="fas fa-star"></label>
-                                    <input type="radio" name="rating" id="rating-2" value="I don't like it"
-                                        onClick="overallRating=this.value;" required>
-                                    <label for="rating-2" class="fas fa-star"></label>
-                                    <input type="radio" name="rating" id="rating-3" value="It is good"
-                                        onClick="overallRating=this.value;" required>
-                                    <label for="rating-3" class="fas fa-star"></label>
-                                    <input type="radio" name="rating" id="rating-4" value="I like it"
-                                        onClick="overallRating=this.value;" required>
-                                    <label for="rating-4" class="fas fa-star"></label>
-                                    <input type="radio" name="rating" id="rating-5" value="I love it"
-                                        onClick="overallRating=this.value;" required>
-                                    <label for="rating-5" class="fas fa-star"></label>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% csrf_token %}                   
+                    
 
                     <div class="row question">
                         <div class="col-12">
-                            {{ rating_form.message | as_crispy_field }}
-                            <!-- <label for="textfeedback">comments:</label>
+                           <label for="textfeedback">comments:</label>
                             <br>
-                            <textarea id="textfeedback" name="comments" rows="4" cols="60"></textarea> -->
+                            <textarea name="textfeedback" id="textfeedback" name="comments" rows="4" cols="60"></textarea>
                         </div>
                     </div>
 

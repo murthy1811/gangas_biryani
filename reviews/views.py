@@ -1,24 +1,72 @@
-from django.shortcuts import render, redirect, reverse
-from dishes.models import Dish
+from django.shortcuts import redirect, get_object_or_404, render
 from django.contrib import messages
-from reviews.forms import RatingForm
+
+from .models import ReviewDish
 
 
 def all_reviews(request):
-    dishes = Dish.objects.all()
-    rating_form = RatingForm()
-    template = 'reviews/reviews.html'
-    context = {
-        'rating_form' : rating_form,
-        'dishes': dishes,
-    }
-    if rating_form.is_valid():
-        select_dish = form.cleaned_data['dish_select']
-        message = form.cleaned_data['message']
-        review = rating_form.save(commit=False)
-        review.save()
+    """Allows user to give feedback"""
+    redirect_url = request.POST.get('redirect_url')
 
-    return render(request, template, context)
+    if request.method == "POST":
+        message = request.POST.get('textfeedback')
+        new_message = ReviewDish(message=message)
+        new_message.save()
+        messages.success(
+            request,
+            f'Thanks! Your feedback is much appreciated')
+        
+    return render(request, 'reviews/reviews.html' )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# from django.shortcuts import render, redirect, reverse
+# from dishes.models import Dish
+# from django.contrib import messages
+# from reviews.forms import RatingForm
+
+
+
+# def all_reviews(request):
+#     dishes = Dish.objects.all()
+#     rating_form = RatingForm()
+#     template = 'reviews/reviews.html'
+#     context = {
+#         'rating_form' : rating_form,
+#         'dishes': dishes,
+#     }
+#     if rating_form.is_valid():
+#         select_dish = form.cleaned_data['dish_select']
+#         message = form.cleaned_data['message']
+#         review = rating_form.save(commit=False)
+#         review.save()
+
+#     return render(request, template, context)
 
 
 

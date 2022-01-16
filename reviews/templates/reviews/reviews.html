@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load ratings %}
 
 
 {% block page_header %}
@@ -52,6 +53,27 @@
                                 <option name="selectdish" value="{{dish.name}}">{{ dish.name }}</option>
                                 {% endfor %}
                             </select>
+                        </div>
+                    </div>
+
+                    <div class="star-rating">
+                        <div class="star-input">
+                            <input type="radio" name="rating" id="rating-5" value="I love it"
+                                onClick="overallRating=this.value;" required>
+                            <label for="rating-5" class="fas fa-star"></label>
+                            <input type="radio" name="rating" id="rating-4" value="I like it"
+                                onClick="overallRating=this.value;" required>
+                            <label for="rating-4" class="fas fa-star"></label>
+                            <input type="radio" name="rating" id="rating-3" value="It is good"
+                                onClick="overallRating=this.value;" required>
+                            <label for="rating-3" class="fas fa-star"></label>
+                            <input type="radio" name="rating" id="rating-2" value="I don't like it"
+                                onClick="overallRating=this.value;" required>
+                            <label for="rating-2" class="fas fa-star"></label>
+                            <input type="radio" name="rating" id="rating-1" value="I hate it"
+                                onClick="overallRating=this.value;" required>
+                            <label for="rating-1" class="fas fa-star"></label>
+
                         </div>
                     </div>
 

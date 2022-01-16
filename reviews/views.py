@@ -15,12 +15,13 @@ def all_reviews(request):
     if request.method == "POST":
         message = request.POST.get('textfeedback')
         dish = request.POST.get('selectdish')
+        star = request.POST.get('rating')
 
         # print(request.POST)
         # print(message)
         # print(dish)
 
-        new_message = ReviewDish(message=message, dish=dish)
+        new_message = ReviewDish(message=message, dish=dish, star=star)
         new_message.save()
         messages.success(
             request,

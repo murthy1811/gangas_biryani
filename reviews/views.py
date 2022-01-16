@@ -12,13 +12,13 @@ def all_reviews(request):
         'rating_form' : rating_form,
         'dishes': dishes,
     }
+    if rating_form.is_valid():
+        select_dish = form.cleaned_data['dish_select']
+        message = form.cleaned_data['message']
+        review = rating_form.save(commit=False)
+        review.save()
 
     return render(request, template, context)
-
-
-
-
-
 
 
 

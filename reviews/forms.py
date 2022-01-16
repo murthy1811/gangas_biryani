@@ -6,7 +6,7 @@ class RatingForm(forms.ModelForm):
     # message = forms.CharField(label='textfeedback', max_length=800)
     class Meta:
         model = Review
-        fields = ('select_dish', 'message',)
+        fields = ('select_dish','message',)
 
     def __init__(self, *args, **kwargs):
         """

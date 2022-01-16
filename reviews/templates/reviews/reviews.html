@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="row">
-                <form action="{% url 'reviews' %}" method="post" class="was-validated" autocomplete="off"
+                <form action="{% url 'reviews' %}" method="POST" class="was-validated" autocomplete="off"
                     id="feedbackform">
                     {% csrf_token %}
                    
@@ -99,6 +99,32 @@
                     </div>
                 </form>
             </div>
+        </div>
+    </div>
+</div>
+
+
+ <!-- Subscription model Code taken from ErnesteMajute user from github -->
+
+<div class="container-fluid about-container">
+    <div class="row">
+        <div class="col-10 mx-auto my-auto text-center">
+            <h3 class="logo-font text-center mt-5 text-dark display-6">Subscribe</h3>
+            <hr class="w-50 mx-auto mb-4 text-dark">
+            <div class="text-center text-dark w-90 mb-5">
+                <small>
+                    Subscribe for our discount offers, new dishes recipes and best customer deals
+                </small>
+            </div>
+            <form action="{% url 'subscriptions_join' %}" method="POST">
+            {% csrf_token %}
+                <div class="mb-3">
+                    <input type="email" class="form-control text-center rounded-0" id="subscriptions-id"  placeholder="Your Email Address" name="subscription_email" aria-describedby="emailHelp" required>
+                </div>
+                <!-- Button to submit form -->
+                <button type="submit" class="mt-5 mb-5 btn btn-dark rounded-0 btn btn-md  text-uppercase">Submit</button>
+                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            </form>
         </div>
     </div>
 </div>

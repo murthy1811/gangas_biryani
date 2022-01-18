@@ -12,7 +12,7 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container-fluid">
+<div class="container-fluid about-container>
     <div class="row">
         <div class="col text-center mt-3">
             <h2 class="logo-font">Rate your Favourite Dish</h2>
@@ -30,66 +30,66 @@
             <div class="row mt-1 mb-2">
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
-                        {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <span class="small"><a href="{% url 'dishes' %}">Dishes Home</a> | </span>
-                        {% endif %}
-                        {{ dishes|length }} Dishes{% if search_term %} found for <strong>"{{ search_term }}"</strong>
-                        {% endif %}
+                        <span class="small"><a href="{% url 'dishes' %}">Dishes Home</a> </span>
                     </p>
                 </div>
             </div>
             <div class="row">
-                <form action="{% url 'reviews' %}" method="POST" class="was-validated" autocomplete="off"
-                    id="feedbackform">
-                    {% csrf_token %}
+                <div class="col-12 col-md-6 order-md-first text-center mt-3">
+                    <form action="{% url 'reviews' %}" method="POST" class="was-validated" autocomplete="off"
+                        id="feedbackform">
+                        {% csrf_token %}
 
-                    <div class="row">
-                        <div class="col-12">
-                             <br>
-                             <select name="selectdish" id="dish-select" type="dropdown-item" height=100 style="width: 750px" name="test">
-                                <option value="" selected>Select a Dish</option>
-                                {% for dish in dishes %}                                
-                                <option name="selectdish" value="{{dish.name}}">{{ dish.name }}</option>
-                                {% endfor %}
-                            </select>
+                        <div class="row">
+                            <div class="col-12">
+                                <br>
+                                <select name="selectdish" id="dish-select" type="dropdown-item" 
+                                    name="test">
+                                    <option value="" selected>Select a Dish</option>
+                                    {% for dish in dishes %}
+                                    <option name="selectdish" value="{{dish.name}}">{{ dish.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="star-rating">
-                        <div class="star-input">
-                            <input type="radio" name="rating" id="rating-5" value="I love it"
-                                onClick="overallRating=this.value;" required>
-                            <label for="rating-5" class="fas fa-star"></label>
-                            <input type="radio" name="rating" id="rating-4" value="I like it"
-                                onClick="overallRating=this.value;" required>
-                            <label for="rating-4" class="fas fa-star"></label>
-                            <input type="radio" name="rating" id="rating-3" value="It is good"
-                                onClick="overallRating=this.value;" required>
-                            <label for="rating-3" class="fas fa-star"></label>
-                            <input type="radio" name="rating" id="rating-2" value="I don't like it"
-                                onClick="overallRating=this.value;" required>
-                            <label for="rating-2" class="fas fa-star"></label>
-                            <input type="radio" name="rating" id="rating-1" value="I hate it"
-                                onClick="overallRating=this.value;" required>
-                            <label for="rating-1" class="fas fa-star"></label>
+                        <div class="star-rating">
+                            <div class="star-input">
+                                <input type="radio" name="rating" id="rating-5" value="I love it"
+                                    onClick="overallRating=this.value;" required>
+                                <label for="rating-5" class="fas fa-star"></label>
+                                <input type="radio" name="rating" id="rating-4" value="I like it"
+                                    onClick="overallRating=this.value;" required>
+                                <label for="rating-4" class="fas fa-star"></label>
+                                <input type="radio" name="rating" id="rating-3" value="It is good"
+                                    onClick="overallRating=this.value;" required>
+                                <label for="rating-3" class="fas fa-star"></label>
+                                <input type="radio" name="rating" id="rating-2" value="I don't like it"
+                                    onClick="overallRating=this.value;" required>
+                                <label for="rating-2" class="fas fa-star"></label>
+                                <input type="radio" name="rating" id="rating-1" value="I hate it"
+                                    onClick="overallRating=this.value;" required>
+                                <label for="rating-1" class="fas fa-star"></label>
 
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row question">
-                        <div class="col-12">
-                            <label for="textfeedback">comments:</label>
-                            <br>
-                            <textarea name="textfeedback" id="textfeedback" name="comments" rows="4"
-                                cols="60"></textarea>
+                        <div class="row question">
+                            <div class="col-12">
+                                <label for="textfeedback">comments:</label>
+                                <br>
+                                <textarea name="textfeedback" id="textfeedback" name="comments" rows="4"
+                                    cols="60"></textarea>
+                            </div>
                         </div>
-                    </div>
 
-                    <div>
-                        <span class="rating-reaction"></span>
-                        <button type="submit" id="submitBtn" class="btn btn-black rounded-0 submit-rating">Submit</button>
-                    </div>
-                </form>
+                        <div>
+                            <span class="rating-reaction"></span>
+                            <button type="submit" id="submitBtn"
+                                class="btn btn-black rounded-0 submit-rating">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

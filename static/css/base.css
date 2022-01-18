@@ -26,6 +26,10 @@ body {
     color: #fd7e14;
 }
 
+#dish-select{
+    width: 750px;
+}
+
 
 
 /* from Bulma */
@@ -356,6 +360,14 @@ input[name='q']::placeholder {
         height : 200px;
         width : auto;
         object-fit: cover;
+    }
+
+    #textfeedback{
+        width: 300px;
+    }
+
+    #dish-select{
+        width: 350px;
     }
 
     }

@@ -30,7 +30,7 @@ def add_to_cart(request, item_id):
                 messages.success(request, f'Added size {size.upper()} {dish.name} to your bag')
         else:
             cart[item_id] = {'items_by_size': {size:quantity}}
-            messages.success(request, f'Added size {size.upper()} {dish.name} to your bag')
+            messages.success(request, f'Added size {size.upper()}{dish.name} to your bag')
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity

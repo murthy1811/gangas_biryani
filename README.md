@@ -206,7 +206,7 @@ The following are elements that could be added to the website in future developm
 
 - Delivery tracking system
 
-- Sizes for the dishes can be added and price change can be inbuilt. Due to time constraint, Sizes code has been written but not added to the site.
+- Sizes for the dishes can be added and price change can be built. Due to time constraint, Sizes code has been written but not added to the site.
 
 ## Technologies Used
 
@@ -396,7 +396,7 @@ USE_AWS | True
 
 ## Credits
 
-    - All images used were downloaded from Unsplash, Pexels, Pixabay 
+- All images used were downloaded from Unsplash, Pexels, Pixabay and freepik.com with various user's contribution
 
 ### Code
 

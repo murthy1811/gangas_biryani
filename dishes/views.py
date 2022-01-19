@@ -46,7 +46,8 @@ def all_dishes(request):
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('dishes'))
             
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                description__icontains=query)
             dishes = dishes.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -84,10 +85,12 @@ def add_dish(request):
         form = DishForm(request.POST, request.FILES)
         if form.is_valid():
             dish = form.save()
-            messages.success(request, 'Successfully added dish!')
-            return redirect(reverse('dish_detail', args=[dish.id]))
+            messages.success(
+                request, 'Successfully added dish!')
+            return redirect(reverse(
+                'dish_detail', args=[dish.id]))
         else:
-            messages.error(request, 'Failed to add dish. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add dish.Please ensure the form is valid.')
     else:
         form = DishForm()
     
@@ -107,16 +110,21 @@ def edit_dish(request, dish_id):
         return redirect(reverse('home'))
     dish = get_object_or_404(Dish, pk=dish_id)
     if request.method == 'POST':
-        form = DishForm(request.POST, request.FILES, instance=dish)
+        form = DishForm(
+            request.POST,
+            request.FILES, instance=dish)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated dish!')
-            return redirect(reverse('dish_detail', args=[dish.id]))
+            messages.success(
+                request, 'Successfully updated dish!')
+            return redirect(reverse(
+                'dish_detail', args=[dish.id]))
         else:
-            messages.error(request, 'Failed to update dish. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update dish.Please ensure the form is valid.')
     else:
         form = DishForm(instance=dish)
-        messages.info(request, f'You are editing {dish.name}')
+        messages.info(
+            request, f'You are editing {dish.name}')
 
     template = 'dishes/edit_dish.html'
     context = {
@@ -138,3 +146,4 @@ def delete_dish(request, dish_id):
     dish.delete()
     messages.success(request, 'Dish deleted!')
     return redirect(reverse('dishes'))
+

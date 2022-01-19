@@ -22,40 +22,24 @@ ___
 - CSS Validation - [pass](https://jigsaw.w3.org/css-validator/)
 - JavaScript Code Quality Tool JSHint - [pass](https://jshint.com/)
 - PEP8 - [pass](http://pep8online.com/)
+- Flake 8 errors fixed but some of the adjustments is causing trouble to the functionality of the site. So due to time 
+  constraint , some errors have been left without effecting functionality
 
 
 
 ### Testing User Stories
 ___
 
-  **Guest user**
+  **Guest/Registered user or Shopper**
 
-* As a guest user of Air Bubble, who is visiting the site for the first time, I want to understand easily what the site is all about
-  * The Home page features a 'Welcome' section to offer new visitors more information on what this site is about. It directly enables the user
-    to search for the travel stories with keywords. It also lets user see all the added stories and a call for signup to register to the site.
-* As a guest user of Air Bubble, I want to search for information related to the recent travels happened to the destination I want to travel.
-  - The search box is clearly labelled and easily accessible from the Home Page.
-* As a guest user of Air Bubble, I want to be able to ask more questions related to a particular user travel story without signing up.
-  - Clicking on Read More on any travel story lets the user read all info and let user comment on the story , there by letting 
-    interact with the other users and the original author of the story.
-* As a guest user of Air Bubble, I want to be able to easily access all available website features from different screen size devices.
-  - The website is fully responsive and designed to provide an optimal user experience, no matter what device users are accessing it from.
-* As a guest user of Air Bubble, I want to be able to sign up easily for the website.
-    - A call to action button to prompt guest users to sign up to access full features of the site is provided right after all the stories
-      and a clear sign up button is highlighted in Nav bar.
+* As a Shopper To view a list of dishes , that Ganga's provide so that I can purchase them
+  * The Home page feature 'order now' button is tested to see if it takes to the all dishes page and checked to add the dishes to the cart.
 
- **Registered user**
+* As a Shopper to view individual dish in detail so that I can check the price, rating, description
+  - In the dishes page, some of the dishes are clicked, and checked if it takes to the dish detail page, and all the details are clearly written
 
-* As a registered user of Air Bubble, I want to be able to login to the site using my username and password.
-  - Log in page is easily accessible from the navbar and allows registered users to easily log in to their account.
-* As a registered user of Air Bubble, I want to be able to add my travel experience to contribute to the community.
-  - When logged in, registered users are able to access Share your story - with two options to add new story or edit a old one.
-* As a registered user of Air Bubble, I want to be able to see all my added stories on my profile and can edit or delete them
-  - Logged in registered users can view all their added stories in their profile page. They can edit or delete them. 
-    Clicking on edit post from share your story in Nav bar also takes user to profile page to edit or delete their posts.
-* As a registered user of Air Bubble, I want to be able to confirm deletion before deleting my entries.
-  - If users wish to delete the story they've added previously, they have to confirm deletion by clicking on Delete button again on a pop-up modal.
-    This was designed to avoid accidental deletion.
+
+
 
  **Site owner / admin**
 

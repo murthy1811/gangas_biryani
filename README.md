@@ -72,7 +72,7 @@ User goals
 
     As a guest/registered user of Ganga's website for the first time, I want:
     
-    1. To view a list of dishes , that Ganga's provide so that I can purchase them
+  1. To view a list of dishes , that Ganga's provide so that I can purchase them
 	2. To view individual dish in detail so that I can check the price, rating, description
 	3. To identify special dishes, discounts etc and take advantage of the discounts, combos I would like to purchase
 	4. To subscribe to the site, so that I receive discounts on my email

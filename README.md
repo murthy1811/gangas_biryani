@@ -284,7 +284,7 @@ The following are elements that could be added to the website in future developm
 
 ## Testing
 
-The testing data for this project can be found in a separate file called [here](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/TESTING.md).change the link
+The testing data for this project can be found in a separate file called [here](https://github.com/murthy1811/gangas_biryani/blob/master/TESTING.md).
 
 ### Issues and Solutions
 * While adding the Reviews model, several issues popped due to the python code errors. Each error is fixed by carefully studying-

@@ -1,5 +1,5 @@
 <div align="center">
-    <a href="https://gangas-ms4.herokuapp.com/" target="_blank"><img src="media/new_background_image.jpg" alt="biryani in bowl"></a>
+    <a href="https://gangas-ms4.herokuapp.com/" target="_blank"><img src="media/home_page.jpg" alt="biryani in bowl"></a>
     <h2>
         Gangas is a food items purchase portal designed for enthusiastic Indian food lovers. 
     </h2>
@@ -17,11 +17,11 @@
     - [**Design**](#design)
 3. [**Features**](#features)
     - [**Homepage Features**](#homepage-features)
-    - [**Signup page Features**](#signuppage-features)
-    - [**Login page Features**](#loginpage-features)
-    - [**Share your story page Features**](#shareyourstory-features)
-    - [**Read More page Features**](#readmorepage-features)
-    - [**Logout page Features**](#logoutpage-features)
+    - [**Dish and Dish detail page Features**](#dishanddishdetail-features)
+    - [**Review page Features**](#review-features)
+    - [**Profile page Features**](#profile-features)
+    - [**Cart page Features**](#cart-features)
+    - [**Checkout page Features**](#checkout-features)
     - [**Future Features**](#future-features)
 4. [**Technologies Used**](#technologies-used)
 5. [**Testing**](#testing)
@@ -152,19 +152,49 @@ User goals
 
 - ### Homepage Features
 
-   1. Navigation bar with clear guidance to the user for home, login and signup.and for signed up user, profile,  and logout pages.
-   2. Order button is implemented on the home page
-   3. Search bar is added on the navigation bar
-   4. All the dishes can be sorted out using the different sort options
-   5. Each dish can be seen in detail with prices and other details in separate page.
-   6. All the dishes can be added to the shopping cart and cart on every page displays the total amount purchased
-   7. Checkout page takes to the payment page, and all the order information is shown
-   8. Review page makes user to give rating and comment on each dish
-   9. Subscribe option is availabale on review page
-   10. Toasts messsages are added and displayed as and when user did an action
-   11. Email is sent after an user registered
-   12. All orders are displayed on user profile, if logged in
-   
+   1.Header contains the logo with link to the homepage
+   2. Search bar is included next to the logo
+   3. Shopping cart which can be seen across the site with displaying the total purchased amount at any given time, and also takes you to cart page upon clicing
+   4. Also, My account icon is provided to register a user or login for the registered user
+   5. A registered user after login can see logout option and and personalized My profile which takes to user profile
+   6. Navigation bar is incorporated to see all the dishes available and different icons to sort them out by price, rating and also categorized
+   7. Home image contains an order button which takes you directly to the all menu
+   8. Footer displays the site information, social media links, and contact information
+
+- ### Dishes and Dish Detail features
+  
+  1. Dishes page can be accesssed by clicking all menu or order button.
+  2. Contains all dishes displayed in card format with price, category and rating detials given.
+  3. Each dish card takes you to the detail page where the additional information is provided 
+  4. Dish detail page contains quantity selector button, , add to cart, and also eat more to take back to the all menu
+
+- ### Review Features
+
+  1. Review page can be accessed by clicking on navbar option reviews.
+  2. Rating of the each dish can be done using select drop down button, and a star rating and also a comment box
+  3. A subscritipon email box is provided for users to subscribe to receive offers and discounts.
+
+- ### Profile features
+
+  1. User profile page contains default delivery information which can be filled and saved
+  2. Order history can be seen with order number, date, items and total
+
+- ### Cart features
+  
+  1. Cart can be accessed by clicking the shopping cart icon on any page
+  2. Items quantity can be added or removed here using +/- icons.
+  3. Eat more button takes you to all menu to add more dishes
+  4. Secure checkout takes you to checkout page for proceeding with payment
+
+- ### Checkout features
+
+  1. Checkout page contains a form where user need to fill in for delivery information
+  2. You can use a card for payment and complete the order
+  3. Upon completion, Order success form is generated
+  4. A recommmendation is to made to login , to save the delivery information for all future 
+  5. For logged in user, option to save the information is provided
+
+- Toast messages for success, error and others have been incorporated for easy understanding of the user
 
 ### Future Features
  
@@ -175,6 +205,8 @@ The following are elements that could be added to the website in future developm
 - A online chat window where all registered users can interact live.
 
 - Delivery tracking system
+
+- Sizes for the dishes can be added and price change can be inbuilt. Due to time constraint, Sizes code has been written but not added to the site.
 
 ## Technologies Used
 
@@ -243,12 +275,6 @@ The following are elements that could be added to the website in future developm
 	- SQlite3
 	- PostgreSQL
 
-- #### **Back-end**
-    * **[Flask](https://flask.palletsprojects.com/en/1.1.x/)** - a lightweight micro web framework written in Python used to create a simple,
-        clean code and to reduce development time.
-         user passwords to authenticate users.
-    * **[Flask Jinja](https://flask.palletsprojects.com/en/1.1.x/templating/)** - used as it's a part of a Flask package and to allow template inheritance.
-
 
 - #### **Deployment**
     * **Git** - used to keep track of the changes made to the repository and for version control.
@@ -286,7 +312,7 @@ The testing data for this project can be found in a separate file called [here](
 
  	1.  Log in to your  Gitpod account 
 	2.  Clone this project repository from GitHub
-    -   Go to my [LuucentCavern repository](https://github.com/murthy1811/gangas_biryani) 
+    -   Go to my [Gangas_Biryani repository](https://github.com/murthy1811/gangas_biryani) 
  	3. Add Gitpod browser extension for Chrome:
     -   Go to  [GitPod Chrome Browser Extension](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki)
   	4.  If you  installed the extension you should view a green Gitpod button on the top right corner of page. Next to Clone or Download button. 
@@ -326,29 +352,6 @@ Heroku cloud platform was used to deploy and host this app by following the step
     * Once logged in, click on the **_New_** button and select **_Create New App_**
     * Create a name for your app and select the region closest to your location.
 
-* **Connect your app to GitHub repository:**
-    * On the **_Deploy_** page, select GitHub as your **_Deplyment method_**.
-    * You will then be prompted to find the github repository, click on **_Connect_** button to connect.
-    * Click on the **_Settings_** tab and and select **_Config Vars_** and **_Reveal Config Vars_**.
-    * Add the following variables (as stored in env.py):
-
-    ```
-    os.environ.setdefault("IP", "0.0.0.0")
-    os.environ.setdefault("PORT", "5000")
-    os.environ.setdefault("SECRET_KEY", "paste_your_secret_key_from_env.py")
-    os.environ.setdefault("MONGO_URI", "obtained_from_your MongoDB_account")
-    os.environ.setdefault("MONGO_DBNAME", "your_db_name")
-    ```
-    * In the IDE terminal, push the two new files to the GitHub repository:
-    ```
-    git add requirements.txt
-    git commit -m "Add requirements.txt"        
-    ```
-    ``` 
-    git add Procfile
-    git commit -m "Add Procfile"
-    git push
-    ```
 * Now go back to Heroku and click on **_Enable Automatic Deployment_** and **_Deploy Branch_**.
 * The app is now connected and Heroku will receive the code from GitHub and automatically update whenever we push changes to the GitHub repository. You should be able to see "Your app was successfully deployed!". Click on **_View_** to launch your app.
 
@@ -372,7 +375,7 @@ To run this project on your device using the IDE of your choice follow these ste
 3. Create a **requirements.txt** file by running command **sudo pip3 freeze --local > requirements.txt**
 4. Create a new Heroku application by clicking **New** after **Create New App**. Give a name to your app and click **Create app**
 5. Install PostgreSQL add-on by running command **heroku addons:create heroku-postgresql:hobby-dev**
-6. Create a Procfile by running command **echo web: gunicorn lucent-cavern.wsgi:application > Procfile**
+6. Create a Procfile by running command **echo web: gunicorn gangas_biryani.wsgi:application > Procfile**
 7. Following config variables needs to be set:
 
 KEY | VALUE
@@ -387,18 +390,6 @@ STRIPE_PUBLIC_KEY | <STRIPE_PUBLIC_KEY>
 STRIPE_SECRET_KEY | <STRIPE_SECRET_KEY>
 STRIPE_WH_SECRET | <STRIPE_WH_SECRET>
 USE_AWS | True
-
-* In your IDE terminal, create the environment variables:   
-    * Type ```touch env.py``` 
-    in the terminal to create the file in the root directory. This file is used to store sensitive data (see environment variables above) and should never be pushed to GitHub.
-    * To ignore it, create .gitignore file by typing 
-
-    ```touch .gitignore``` 
-
-    and add env.py into this file.
-* You can now run the app, just type in the IDE terminal: 
-
-    ```python3 app.py```. 
 
 
 **[back to top](#wd-buzzwords)**

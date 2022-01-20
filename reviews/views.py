@@ -3,6 +3,9 @@ from django.contrib import messages
 from dishes.models import Dish
 from .models import ReviewDish
 
+# Only code idea has been taken from Subscriptions app (inspired by 'https://github.com/ErnestaMajute/lucentCavern/blob/master/subscriptions/views.py'.
+# Several commits have been made to solve this model and finally solved by inspiration, but code is written by me
+
 
 def all_reviews(request):
     dishes = Dish.objects.all()

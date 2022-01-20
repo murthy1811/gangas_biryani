@@ -3,6 +3,8 @@ from django.contrib import messages
 
 from .models import SubscriptionUser
 
+# Code has been taken from 'https://github.com/ErnestaMajute/lucentCavern/blob/master/subscriptions/views.py'.
+# This code has been taken to save some time and also to learn the method and implement in my own reviews app
 
 def subscriptions_join(request):
     """Alows user to register email to a subscribers email list"""

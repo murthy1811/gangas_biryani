@@ -396,7 +396,10 @@ USE_AWS | True
 
 - Used bootstrap for formatting and responsiveness
 - Major HTML code and css  is also adapted from the template from startbootstrap.com
-- A lot of mistakes were identified and corrected in Review page code, thanks to github user Erneste Majute , as I got influenced and used some code.
+- A lot of mistakes were identified and corrected in Review page code, thanks to github user Erneste Majute , as I got inspired from this
+- Subscriptions app code is adapted from 'https://github.com/ErnestaMajute/lucentCavern/blob/master/subscriptions/views.py'. Thanks to
+  Erneste Majute. In order to solve reviews app code, got inspired by this and also used this code to add subscriptions to add additional model.
+
 
 
 ## Acknowledgements

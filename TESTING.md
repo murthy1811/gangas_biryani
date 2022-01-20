@@ -38,13 +38,57 @@ ___
 * As a Shopper to view individual dish in detail so that I can check the price, rating, description
   - In the dishes page, some of the dishes are clicked, and checked if it takes to the dish detail page, and all the details are clearly written
 
+* As a Shopper to identify special dishes, discounts etc and take advantage of the discounts, combos I would like to purchase
+  - On the main navigation, Specials are categroized separately and is tested to see if the combos, discounted dishes are showing up.
 
+* As a Shopper to subscribe to the site, so that I receive discounts on my email
+  - On the reviews page, sample email is entered into the subscription box and tested. Success message generated and email showed up in subscription list
+
+* As a Shopper, to sort the list of all dishes available based on rating, price and name
+ - On the all dishes page, a side box is provided to sort the dishes based on price, alphabetically etc
+
+* As a Shopper, To view and sort the dishes based on the specific category
+ - All the dishes can be viewed based on different categories directly from the navigation liek curry's , Biryani's and can be sorted rating, price wise too. 
+   all the links have been clicked and tested to see if the respective dishes are being shown.
+
+* As a Shopper, To search the dish using a keyword and get the results which are countable
+ - Search bar provided in header is tested by searching with input and also with no input. Corresponding results are shown.
+
+* As a Shopper, To add the dishes to the cart, and continue shopping to view more dishes
+ - Random dishes are clicked and went into detail page, add to cart and eat more buttons are tested to see if the dish is being added to the cart
+    and Eat more button takes you back to all menu.
+
+* As a Shopper, To securely pay the amount using a card and get confirmation of my order on email
+ - Added dishes in cart ,and checkout buttons are tested, and went to payment page, testing visa card number is given , and payment is made successfully.
+   Order confirmation email is also provided.
+
+* As a Shopper, To receive notifications as soon as I add some dish to the cart or any other similar action
+ - Actions such as adding dishes to the cart, updating the dishes to the cart, deleting them, and logout, login buttons were tested and all actions 
+   recieved toast messages on the far top right corner. 
+
+* As a Shopper, To easily register for an account using my email and name
+ - Register button is accessed through My account nav icon and email and all details entered to see if registraton is successful. Confirmation email to activate
+   has been received and after confirmation, account has been created in database, and account is successfully logged in
+
+* As a Shopper, To easily access my profile using login and logout
+  - Registered user testing has been done and my profile has been accessed. Both Login and Logout buttons are working successfully
+
+* As a Shopper, To recieve an email confirmation after registering
+ - After registration is made, confirmation email to activate the account has been received by the user
+
+* As a Shopper, To have a personalized user profile where I can see my previous orders
+ - An order has been made as a registered user, and order history is visible in my profile page
+
+* As a Shopper, To see info of the site, contact information and social media links.
+ - Footer page is provided with contact info, social links ,and site about us. All links are accessible and email, phone links prompt the user to take initiation.
 
 
  **Site owner / admin**
 
-* As a site owner of Air Bubble, I want to be able to delete entries contributed by registered users if necessary.
-  - The admin user is authorised to remove any content that is deemed irrelevant or inapropriate.
+* As a site owner of Gangas, I want to be able to add, delete, update the dishes and access other information.
+ - Superuser account has been logged in, and all dishes have the edit and delete buttons and are working successfully.
+   Dish management page is accessible via my account and new dishes can be added with all the information. All the jobs can also be done on admin page after logging in
+   Security has been provided to stop other users to make changes to the site. Subscription users and email management is accessible through Admin page
 
 **[back to top](#testing)**
 
@@ -55,48 +99,39 @@ ___
 
   **Navigation Bar**
 
-  - The bootstrap navbar is fixed and is visible across all pages and on all screen size devices. Navbar menu collapses into a hamburger menu on Tablets and smaller devices.
+  - The bootstrap navbar is fixed and is visible across all pages and on all screen size devices. Navbar menu collapses into a hamburger menu on smaller devices.
   - The sidenav, which was used in conjunction with the fullscreen navigation is working as desired and is visible on screen sizes
   - All the links on both, navbar and a sidenav were checked by clicking and are working as intended, allowing users to jump to the linked page.
   - The brand logo link was also tested by clicking and is working correctly, as it takes users back to the Home page from anywhere on the site.
+  - Order now button is tested to see if all dishes can be seen and is working fine.
 
 
   **Search box**
   
   The input field was tested by:
-  * Entering airport codes and country names that exist in the stories and clicking the _Search button_ - the selected story or stories, in case if more than one is available, are displayed 
+  * Entering keywords which contain dish names that exist in the site and clicking the _Search button_ - dish or dishes, in case if more than one is available, are displayed 
   * Typing words that are not in the website stories and clicking the Search button - nothing is displayed on the page.
 
-  In both cases users see _search_ button that refreshes the page and displays all the stories contained in the website.
-  * Clicking on the _Search button_ without entering any value - _Please fill in this field_ message is displayed, prompting users to enter a value. All above described features are working as intended.
-
-  * Reset button is tested, by typing some text and checked if the page is reloaded by clicking and the reset button is fucntioning as intended.
-
-  **Travel stories**
+  **Dishes**
   
   Selected travel story cards were tested by:
   * clicking on read more button and to see if all the information can be read on a new page.
   * This step is repeated on all different devices and checked if rendered information is easy to read and neatly aligned.
 
-**Call Out**
-  
-  Call out banner to sign up is tested by:
-  * clicking on sign up button and to see if the sign up page is displayed
-
-
 **Login Page**
 
 * The page only appears when the user is not logged in.
-* Verified, the Flash message always pops up when users successfully log in to the website. 
+* Verified, the toast message always pops up when users successfully log in to the website. 
 * Link below the login section was clicked to test and is functioning as it should, redirecting users to the _Sign Up_ page.
 * Both username and password fields are tested with out an entry and user is prompted to enter the details
 * In case of either wrong username or wrong password, a flash message is displayed to let the user know the details are wrong.
+* Forgot password is tested and emai lhas been recieved to update.
 
  **Sign Up Page**
 
 * Sign Up page only appears when the user is not logged in.
-* Flash message pops up to confirm the successul registration.
-* The link below the sign up is fully functional, redirects users to the _Log In_ page.
+* Toast message pops up to confirm the successul registration.
+* The link for sign in is fully functional, redirects users to the _Log In_ page.
 * All the entries are tested without entering any details, and user is prompted to enter the details
 * Email address is entered in wrong format and user is prompted to enter the right format
 * Requirements of username and password are tested with wrong format entry( apart from numbers and letters) and user is 
@@ -106,49 +141,43 @@ ___
  **Profile Page**
 
 * Profile page is checked if the right username and right email address is displayed as entered by user
-* Change password button is checked , if the password can be updated and flash message is displayed upon successful change
 * Current password is wrongly entered to test if the user be given a message to enter the right password.
-* After sharing a story, Profile page is visited to back to check if the user entered story is being displayed in the profile
-* Checked if the user story in profile is coming with edit and delete options
-* Edit button is checked if the page takes user to edit the information of their story.
-* Delete button is tested if the confirm delete option (modal) is being displayed and the next selections on modal are working perfectly.
-  Both the cancel and delete buttons are functioning as intended. Flash message is displayed upon successfull deletion
+* Page is checked to see if the information can be saved for future payment
+* Order history is checked and clicked on the previuous order to see if the details are displayed
 
 
-**Share your Story Page**
+**Cart**
 
-  New Post
-
-* Share my story button is tested with out entry in any fields and checked if the user is prompted to fill the mandatory fields.
-* Flash message is displayed upon successful entry of the story
-* Home page is checked if the added story is being displayed with a read more button
-
- Edit post
-
-* Edit post button from Navbar is tested to see if the user is taken to Profile page for editing their stories
-* Edit button is tested and information is changed and submitted to check if the information is updated. Functioning as intended
-* Flash message is displayed after the story is updated
+* Cart page is checked to see if the dishes added can be updated or removed. 
+* Checked if the secure check out and eat more buttons are working as intended
+* Checked to see if cart becomes empty after removing all dishes
+* Checked to see if the total and subtotal are updated upon increasing or decreasing the dishes quantity
 
 
 **Log Out Page**
 
 * The page is visible for logged in users only.
-* The _Log Out_ link on the navbar (sidenav on smaller screens) is working as expected and logs users out of their account when clicked.
-* Further tests verified that users are then redirected to the _Log In_ page where a flash message pops up to confirm they've been logged out. 
+* The _Log Out_ link on the navbar (sidenav on smaller screens) is working as expected and logs users out of their account when clicked only after confirmation
+* Further tests verified that users are then redirected to the home page.
 
 
-**Readmore Page**
+**Checkout Page**
 
-* Readmore button is tested to see if the user is taken to read more page with full information
-* Comments section is tested both by entering comments with out logged in user and with logged in user.
-  comments are rendering as intended
+* Tested to see if the information column is being filled as intended , with the wrong inputs and right ones.
+  user is prompoted to correct the inputs in case they enter wrong information
+
+. For Checkout testing process use test credit card numbers provided by [Stripe documentation](https://stripe.com/docs/payments/accept-a-payment).
+
+Number | Description 
+------------- | -------------
+4242424242424242 | Succeeds and immediately processes the payment.
+4000000000003220 | 3D Secure 2 authentication must be completed for a successful payment.
+4000000000009995 | Always fails with a decline code of insufficient_funds.
 
 **Admin user profile**
 
-* Admin user is logged in and tested if the admin can be able to delete all the stories when read more button is used
-* Flash message is displayed upon successfull deletion
-* Checked and tested if all the comments made, have delete option visible to the admin.
-* Checked if defensive code for delete modal is working when the delete button is clicked
+* Admin user is logged in and tested if the admin can be able to delete all the dishes, emails and users.
+
 
 **[back to top](#testing)**
 
@@ -156,38 +185,24 @@ ___
 ___
 * **Registration attempt with an existing email address**
 
-  Returns flash message "Email address already registered".
-  ![Email address exists](static/assets/img/email_existing.jpg)
+
+  ![Email address exists](media/existing_email_registration.jpg)
 
 * **Registration attempt with an existing username**
 
   Returns flash message "Username already existing".
-  ![Username exists](static/assets/img/username_existing.jpg)
+  ![Username exists](media/existing_user_registration.jpg)
 
 * **Registration attempt with an wrong email format**
 
   prompts user to use the right format
-  ![Email format wrong](static/assets/img/wrong_email.jpg)
+  ![Email format wrong](media/wrong_email_format.jpg)
 
 * **Login attempt with an wrong username or password**
 
   Returns flash message "Incorrect username and/or password".
-  ![Wrong entries](static/assets/img/wrong_details.jpg)
+  ![Wrong entries](media/wrong_user_pass.jpg)
 
-* **Add Story form validation**
-
-  Prompts user to fill in mandatory fields.
-  ![Form validation](static/assets/img/add_story_validation.jpg)
-
-* **Current password mismatch while changing password**
-
-  Returns flash message "Your current password does not match with our records".
-  ![Current password mismatch](static/assets/img/current_password_mismatch.jpg)
-
-* **Confirmation before deleting the story**
-
-  Modal popup to let user confirm the deletion.
-  ![Confirm Deletion](static/assets/img/delete_modal.jpg)
 
 **[back to top](#testing)**
 
@@ -199,15 +214,14 @@ It was tested on physical devices including iPhone XR and iPad. All tests have s
 
 ### Usability Testing
 
-This website was tested for usability by my family and friends. Overlapping of test in forms is identified through this process on small screens and fixed later.
+This website was tested for usability by my family and friends. CSS erors have been identified through this process on small screens and fixed later.
 Later, They didn't experience any issues during the testing process and it was confirmed that the website was easy to use and navigate. They were able to intuitively use the interactive elements of the website, find the information they were looking for and easily understand the purpose of the website.
 
 
 ### Performance Testing
 
-Performance testing was carried out using Lighthouse in Chrome Developer Tools. The tests had shown good performance and excellent accessibility and best practice results for desktop devices. 
-Steps taken to improve performance for the mobile devices following the initial tests:
-* Added meta description to the site to improve best practices
+Performance testing was carried out using Lighthouse in Chrome Developer Tools. The tests had shown good performance and excellent accessibility and best practice results for desktop devices. (static/assets/img/current_password_mismatch.jpg)
+
 
 ### Browser Compatibility Testing
 

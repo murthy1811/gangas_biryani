@@ -185,23 +185,25 @@ Number | Description
 ___
 * **Registration attempt with an existing email address**
 
-
-  ![Email address exists](media/existing_email_registration.jpg)
+  ![Email address exists](wireframes/existing_email_registration.jpg)
 
 * **Registration attempt with an existing username**
 
-  Returns flash message "Username already existing".
-  ![Username exists](media/existing_user_registration.jpg)
+  Returns message "Username already existing".
+
+  ![Username exists](wireframes/existing_user_registration.jpg)
 
 * **Registration attempt with an wrong email format**
 
   prompts user to use the right format
-  ![Email format wrong](media/wrong_email_format.jpg)
+
+  ![Email format wrong](wireframes/wrong_email_format.jpg)
 
 * **Login attempt with an wrong username or password**
 
-  Returns flash message "Incorrect username and/or password".
-  ![Wrong entries](media/wrong_user_pass.jpg)
+  Returns  "Incorrect username and/or password".
+
+  ![Wrong entries](wireframes/wrong_user_pass.jpg)
 
 
 **[back to top](#testing)**
@@ -220,7 +222,9 @@ Later, They didn't experience any issues during the testing process and it was c
 
 ### Performance Testing
 
-Performance testing was carried out using Lighthouse in Chrome Developer Tools. The tests had shown good performance and excellent accessibility and best practice results for desktop devices. (static/assets/img/current_password_mismatch.jpg)
+Performance testing was carried out using Lighthouse in Chrome Developer Tools. The tests had shown good performance and excellent accessibility and best practice results for desktop devices.
+
+![Lighthouse performance](wireframes/performance.jpg)
 
 
 ### Browser Compatibility Testing

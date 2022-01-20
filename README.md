@@ -1,5 +1,5 @@
 <div align="center">
-    <a href="https://gangas-ms4.herokuapp.com/" target="_blank"><img src="media/home_page.jpg" alt="biryani in bowl"></a>
+    <a href="https://gangas-ms4.herokuapp.com/" target="_blank"><img src="wireframes/home_page.jpg" alt="biryani in bowl"></a>
     <h2>
         Gangas is a food items purchase portal designed for enthusiastic Indian food lovers. 
     </h2>

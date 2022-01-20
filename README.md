@@ -103,37 +103,28 @@ User goals
 
 - ### Wireframes to be done
 
-  The wireframes for this project were created using figma.
+  The wireframes for this project were created using figma. There were many changes compared to initial thoughts. Also, Django model pages like login, logout, register layout 
+  has been adapted from Boutique Ado project to save time.
     
-  - [Desktop Home](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/desktop_home.jpg).
+  - [Desktop Home](https://github.com/murthy1811/gangas_biryani/blob/master/wireframes/desktop_main.jpg).
 
-  - [Tablet Home](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/tablet_home.jpg)
+  - [Tablet Home](https://github.com/murthy1811/gangas_biryani/blob/master/wireframes/tablet_main.jpg)
 
-  - [Mobile Home](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/mobile_home.jpg)
+  - [Mobile Home](https://github.com/murthy1811/gangas_biryani/blob/master/wireframes/mobile_main.jpg)
 
-  - [Desktop Login or Signup](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/desktop_login_signup.jpg).
+  - [Desktop Dishes](https://github.com/murthy1811/gangas_biryani/blob/master/wireframes/desktop_dishes.jpg).
 
-  - [Mobile Login or Signup](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/tablet_login_signup.jpg)
+  - [Tablet Dishes](https://github.com/murthy1811/gangas_biryani/blob/master/wireframes/tablet_dishes.jpg)
 
-  - [Mobile Login or Signup](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/mobile_login-signup.jpg)
+  - [Mobile Dishes](https://github.com/murthy1811/gangas_biryani/blob/master/wireframes/mobile_dishes.jpg)
 
-  - [Desktop New or Edit Story](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/desktop_newstory_editstory.jpg).
+  - [Desktop Reviews](https://github.com/murthy1811/gangas_biryani/blob/master/wireframes/desktop_reviews.jpg).
 
-  - [Tablet New or Edit Story](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/tablet_newstory_editstory.jpg)
+  - [Tablet Reviews](https://github.com/murthy1811/gangas_biryani/blob/master/wireframes/tablet_reviews.jpg)
 
-  - [Mobile New or Edit Story](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/mobile_newstory_editstory.jpg)
+  - [Mobile Reviews](https://github.com/murthy1811/gangas_biryani/blob/master/wireframes/mobile_reviews.jpg)
 
-  - [Desktop Profile](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/desktop_profile.jpg).
-
-  - [Tablet Profile](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/tablet_profile.jpg)
-
-  - [Mobile Profile](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/mobile_profile.jpg)
-
-  - [Desktop Readmore](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/desktop_readmore.jpg).
-
-  - [Tablet Readnore](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/tablet_readmore.jpg)
-
-  - [Mobile Readmore](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/mobile_readmore.jpg)
+  
 
 
 - ### Design
@@ -146,8 +137,9 @@ User goals
 
     Fonts 'Revalia' is used to bring out the funky style to keep the site as special as a restaurant
 
-    
+    ![Fonts](wireframes/fonts.jpg)
 
+    
 ## Features
 
 - ### Homepage Features

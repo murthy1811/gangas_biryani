@@ -87,7 +87,7 @@ User goals
 	13. To recieve an email confirmation after registering
 	14. To have a personalized user profile where I can see my previous orders
 	15. To see info of the site, contact information and social media links.
- 
+
 
 - ### Site owner stories
 
@@ -96,12 +96,12 @@ User goals
     1. To be able to add, modify and delete the dishes and maintain the website
     
 
-- ### Database diagram to be done
+- ### Database diagram
 
-  - [Database Diagram](https://github.com/murthy1811/Milestone-Project-3-AirBubble/blob/master/static/assets/wireframes/database_diagram.jpg).
+  - [Database Diagram](https://github.com/murthy1811/gangas_biryani/blob/master/wireframes/database_diagram.png).
   
 
-- ### Wireframes to be done
+- ### Wireframes
 
   The wireframes for this project were created using figma. There were many changes compared to initial thoughts. Also, Django model pages like login, logout, register layout 
   has been adapted from Boutique Ado project to save time.
@@ -199,6 +199,8 @@ The following are elements that could be added to the website in future developm
 - Delivery tracking system
 
 - Sizes for the dishes can be added and price change can be built. Due to time constraint, Sizes code has been written but not added to the site.
+
+- Based on Reviews and ratings received, Dishes rating can be automatically updated. Due to time constraint, this model has not built.
 
 ## Technologies Used
 
